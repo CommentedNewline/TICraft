@@ -47,7 +47,7 @@ int main() {
     // ti_CleanAll();
     // (255*255) + 2 = 65027B (63.50 KiB)
     if (ti_MemChk() < (255*255) + 2) {
-        os_PutStrFull("WARNING!! Not enough free user mem to run TICRAFT! Continuing may result in corruption or your calculator crashing and resetting. Try deleting or archiving some programs or AppVars. Press \"Enter\" to continue or press any other key to exit.");
+        os_PutStrFull("WARNING! Not enough free RAM to run TICRAFT! Try deleting or archiving some files. Press \"Enter\" to continue (crash likely!) or press ANY OTHER key to exit (safe route).");
         os_ResetFlag(SHIFT, ALPHALOCK);
         if (os_GetKey() != k_Enter) {
             return 1;
