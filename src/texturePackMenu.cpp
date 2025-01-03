@@ -70,7 +70,7 @@ bool verifyTexturePack(packEntry pack) {
 }
 
 void texturePackMenu() {
-    memset(gfx_vram, 0, 320*240*sizeof(uint16_t));
+    memset(gfx_vram, 0, 320*240*sizeof(uint16_t)); // was there a reason the screen is being cleared with a memory poke?
     char* name;
     void* vat_ptr = nullptr;
     char** texturePackNames = (char**) malloc(0);
